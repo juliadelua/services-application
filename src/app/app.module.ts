@@ -5,12 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { LogComponent } from './log/log.component';
 import { RouterModule } from '@angular/router';
 import { TimerService } from './timer.service';
 import { TasksService } from './tasks.service';
-import { LoggerService } from './logger.service';
 import { TimerComponent } from './timer/timer.component';
+import { DisciplinasService } from './disciplinas.service';
+import { DisciplinasComponent } from './disciplinas/disciplinas.component';
 
 @NgModule({
   imports: [
@@ -18,8 +18,7 @@ import { TimerComponent } from './timer/timer.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: TimerComponent },
-      { path: 'tasks', component: TasksComponent },
-      { path: 'log', component: LogComponent },
+      { path: 'disciplinas', component: DisciplinasComponent },
     ]),
   ],
   declarations: [
@@ -27,10 +26,10 @@ import { TimerComponent } from './timer/timer.component';
     HelloComponent,
     TasksComponent,
     TimerComponent,
-    LogComponent,
+    DisciplinasComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [TimerService, TasksService, LoggerService],
+  providers: [TimerService, TasksService, DisciplinasService],
 })
 export class AppModule {}
 
