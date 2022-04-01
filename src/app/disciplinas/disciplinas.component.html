@@ -1,0 +1,15 @@
+<h2>Disciplinas</h2>
+
+<div>
+  <input type="text" [(ngModel)]="nome" />
+  <input type="text" [(ngModel)]="diaDaSemana" />
+  <input type="text" [(ngModel)]="horario" />
+  <button (click)="criar()">Add</button>
+</div>
+
+<ul>
+  <li *ngFor="let disciplina of disc.getter(); index as i">
+    {{ disciplina.nome }}
+    <span (click)="disc.remove(i)"> - </span>
+  </li>
+</ul>

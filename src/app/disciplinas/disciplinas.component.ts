@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DisciplinasService } from '../disciplinas.service';
 
 @Component({
   selector: 'app-disciplinas',
@@ -10,7 +11,15 @@ export class DisciplinasComponent implements OnInit {
   diaDaSemana: string;
   horario: string;
 
-  constructor() {}
+  constructor(public disc: DisciplinasService) {}
 
   ngOnInit() {}
+
+  criar() {
+    this.disc.adicionar({
+      nome: this.nome,
+      diaDaSemana: this.diaDaSemana,
+      horario: this.horario,
+    });
+  }
 }
