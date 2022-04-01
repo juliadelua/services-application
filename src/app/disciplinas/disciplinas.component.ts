@@ -16,10 +16,14 @@ export class DisciplinasComponent implements OnInit {
   ngOnInit() {}
 
   criar() {
-    this.disc.adicionar({
-      nome: this.nome,
-      diaDaSemana: this.diaDaSemana,
-      horario: this.horario,
-    });
+    if (this.nome && this.diaDaSemana && this.horario) {
+      this.disc.adicionar({
+        nome: this.nome,
+        diaDaSemana: this.diaDaSemana,
+        horario: this.horario,
+      });
+    } else {
+      alert('Preencha todos os campos!');
+    }
   }
 }
