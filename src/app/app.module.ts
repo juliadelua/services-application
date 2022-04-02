@@ -4,10 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { TasksComponent } from './tasks/tasks.component';
 import { RouterModule } from '@angular/router';
 import { TimerService } from './timer.service';
-import { TasksService } from './tasks.service';
 import { TimerComponent } from './timer/timer.component';
 import { DisciplinasService } from './disciplinas.service';
 import { DisciplinasComponent } from './disciplinas/disciplinas.component';
@@ -24,12 +22,11 @@ import { DisciplinasComponent } from './disciplinas/disciplinas.component';
   declarations: [
     AppComponent,
     HelloComponent,
-    TasksComponent,
     TimerComponent,
     DisciplinasComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [TimerService, TasksService, DisciplinasService],
+  providers: [TimerService, DisciplinasService],
 })
 export class AppModule {}
 
