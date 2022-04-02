@@ -62,9 +62,7 @@ table {
 
 th {
   color: palevioletred;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 6px;
+  padding: 10px 6px;
   text-align: center;
   border: 1px solid white;
 }

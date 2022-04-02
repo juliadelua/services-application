@@ -4,7 +4,9 @@ Vamos contar? Digite quanto tempo para passar e clique para começar.
 <br /><br />
 <input type="number" [(ngModel)]="sec" />
 <br /><br />
-Esse contador tem um intervalo de {{ this.sec }} segundos, desse modo:
+Esse contador tem um intervalo de {{ this.sec }} segundos. Estamos no número
 {{ timer.getCount() }}. <br /><br />
-<button (click)="timer.start(this.sec * 1000)">start</button> *
-<button (click)="timer.stop()">stop</button>
+<button (click)="timer.start(this.sec * 1000)" class="material-icons">
+  directions_walk
+</button>
+<button (click)="timer.stop()" class="material-icons">front_hand</button>

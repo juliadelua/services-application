@@ -4,20 +4,22 @@
   Matéria: <input type="text" [(ngModel)]="nome" /><br />
   Dia da Semana: <input type="text" [(ngModel)]="diaDaSemana" /><br />
   Horário: <input type="text" [(ngModel)]="horario" /><br />
-  <button (click)="criar()">Adicionar</button>
+  <button (click)="criar()">Adicionar Nova Matéria</button>
 </div>
-
+<hr />
 <table>
   <tr>
     <th>Matéria</th>
     <th>Dia</th>
     <th>Horário</th>
-    <th>(X)</th>
+    <th>Remover</th>
   </tr>
   <tr *ngFor="let disciplina of disc.getter(); index as i">
     <td>{{ disciplina.nome }}</td>
     <td>{{ disciplina.diaDaSemana }}</td>
     <td>{{ disciplina.horario }}</td>
-    <td (click)="disc.remove(i)"><span style="cursor:pointer;">X</span></td>
+    <td (click)="disc.remove(i)">
+      <span style="cursor:pointer;" class="material-icons">highlight_off</span>
+    </td>
   </tr>
 </table>
